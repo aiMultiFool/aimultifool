@@ -1,0 +1,114 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>aimultifool.ico</ApplicationIcon>
+    <AssemblyName>aiMultiFool</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <PlatformTarget>x64</PlatformTarget>
+    <AssemblyVersion>0.8.50.0</AssemblyVersion>
+    <FileVersion>0.8.51.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="aiMultiFool-Help.rtf" />
+    <None Remove="cards-png\Akane Hoshino.png" />
+    <None Remove="cards-png\Alien Invasion.png" />
+    <None Remove="cards-png\Aria and the End of the World.png" />
+    <None Remove="cards-png\Island Encounter.png" />
+    <None Remove="cards-png\Lilith the Witch.png" />
+    <None Remove="cards-png\Roxy the Cultist Advocate.png" />
+    <None Remove="cards-png\Scarlett the Goth.png" />
+    <None Remove="cards-png\The Conscript.png" />
+    <None Remove="cards-png\The Construct.png" />
+    <None Remove="cards-png\The Frozen World.png" />
+    <None Remove="cards-png\The Night Club.png" />
+    <None Remove="cards-png\The Ruined Church Ritual.png" />
+    <None Remove="cards-png\Zombie Outbreak.png" />
+    <None Remove="Resources\aiMultiFool-EULA.txt" />
+    <None Remove="Resources\aiMultiFool-Help.mht" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="aiMultiFool-Help.rtf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="aimultifool.ico" />
+    <Content Include="aiMultiFool-EULA.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cards-png\Akane Hoshino.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cards-png\Alien Invasion.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cards-png\Aria and the End of the World.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cards-png\Island Encounter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cards-png\Lilith the Witch.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cards-png\Roxy the Cultist Advocate.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cards-png\Scarlett the Goth.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cards-png\The Conscript.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cards-png\The Construct.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cards-png\The Frozen World.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cards-png\The Night Club.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cards-png\The Ruined Church Ritual.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cards-png\Zombie Outbreak.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JsonRepairUtils" Version="0.0.2" />
+    <PackageReference Include="LLamaSharp" Version="0.19.0" />
+    <PackageReference Include="LLamaSharp.Backend.Cpu" Version="0.19.0" />
+    <PackageReference Include="LLamaSharp.Backend.Cuda12" Version="0.19.0" />
+    <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="14.3.0" />
+    <PackageReference Include="Microsoft.ML" Version="4.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Debug\net8.0-windows\" />
+  </ItemGroup>
+
+</Project>
